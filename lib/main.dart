@@ -1,18 +1,29 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MainApp());
+void main(List<String> args) {
+  runApp(const MaterialApp(
+    title: "Radhe Infotech",
+    home: Homepage(),
+  ));
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class Homepage extends StatelessWidget {
+  const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Radhe infotech"),
+      ),
+      // ignore: avoid_unnecessary_containers
+      body: Center(
+        child: Container(
+          alignment: Alignment.center,
+          color: const Color.fromARGB(255, 16, 129, 182),
+          height: 200,
+          width: 200,
+          child: Text("I love you"),
         ),
       ),
     );
