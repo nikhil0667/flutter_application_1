@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -16,31 +17,32 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Radhe infotech"),
       ),
+      backgroundColor: Colors.lightBlueAccent,
       // ignore: avoid_unnecessary_containers
-      body: Center(
-        child: Container(
-          alignment: Alignment.center,
-          // color: const Color.fromARGB(255, 16, 129, 182),
-          height: 100,
-          width: 100,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black38,
-                )
-              ],
-              gradient: LinearGradient(colors: [Colors.amber, Colors.pink])),
-          child:const Text(
-            "Welcome to page",
-
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 15,
+      body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children:<Widget> [
+            Container(
+              padding: const EdgeInsets.all(10),
+              width: 100,
+              height: 100,
+              color: Colors.orange,
             ),
-          ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              width: 100,
+              height: 100,
+              color: Colors.white,
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              width: 100,
+              height: 100,
+              color: Colors.red,
+            ),
+          ],
         ),
-      ),
-    );
+      );
   }
 }
