@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -17,32 +16,40 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Radhe infotech"),
       ),
-      backgroundColor: Colors.lightBlueAccent,
       // ignore: avoid_unnecessary_containers
-      body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children:<Widget> [
-            Container(
-              padding: const EdgeInsets.all(10),
-              width: 100,
-              height: 100,
-              color: Colors.orange,
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              width: 100,
-              height: 100,
-              color: Colors.white,
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-          ],
+      body: Container(
+        color: Colors.blue,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: SizedBox(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Container(
+
+                width: 100,
+                height: 100,
+                color: Colors.orange,
+              ),
+              Container(
+
+                // margin: const EdgeInsets.only(left: 10.0,right: 10.0),
+                width: 100,
+                height: 100,
+                color: Colors.white,
+              ),
+              Container(
+
+                // margin: const EdgeInsets.only(left: 10.0,right: 10.0),
+                width: 100,
+                height: 100,
+                color: Colors.green,
+              ),
+            ],
+          ),
         ),
-      );
+      ),
+    );
   }
 }
