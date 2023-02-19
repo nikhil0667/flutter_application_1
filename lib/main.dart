@@ -13,19 +13,33 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Radhe infotech"),
-        ),
-        // ignore: avoid_unnecessary_containers
-        body: Center(
-          child: Container(
-            alignment: Alignment.center,
-            color: const Color.fromARGB(255, 16, 129, 182),
-            height: 200,
-            width: 200,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-            child: const Text("I love you"),
+      appBar: AppBar(
+        title: const Text("Radhe infotech"),
+      ),
+      // ignore: avoid_unnecessary_containers
+      body: Center(
+        child: Container(
+          alignment: Alignment.center,
+          // color: const Color.fromARGB(255, 16, 129, 182),
+          height: 200,
+          width: 200,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black38,
+                )
+              ],
+              gradient: LinearGradient(colors: [Colors.amber, Colors.pink])),
+          child: const Text(
+            "Welcome to page",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 15,
+            ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
