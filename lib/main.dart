@@ -21,8 +21,8 @@ class Homepage extends StatelessWidget {
         child: Container(
           alignment: Alignment.center,
           // color: const Color.fromARGB(255, 16, 129, 182),
-          height: 200,
-          width: 200,
+          height: 100,
+          width: 100,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
@@ -31,8 +31,9 @@ class Homepage extends StatelessWidget {
                 )
               ],
               gradient: LinearGradient(colors: [Colors.amber, Colors.pink])),
-          child: const Text(
+          child:const Text(
             "Welcome to page",
+
             style: TextStyle(
               color: Colors.white,
               fontSize: 15,
